@@ -1,12 +1,12 @@
 # made by Yangjin Cho.
-# Check for latest release.
+# Check for latest release at https://github.com/sheepjin99/DonggukCafeteria/releases.
 
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import datetime
 def parse_dgu_coop(index):
     day_of_week = datetime.datetime.today().weekday()+3
-    print(day_of_week)  # Sun = 2, Mon = 3, Tue = 4, Wen = 5, Thu = 6, Fri = 7, Sat = 8 (td index)
+    # Sun = 2, Mon = 3, Tue = 4, Wen = 5, Thu = 6, Fri = 7, Sat = 8 (td index)
 
     html = urlopen('https://dgucoop.dongguk.edu/store/store.php?w=4&l=2&j=0')  # ex) j=-1 one week before
     source = html.read()
